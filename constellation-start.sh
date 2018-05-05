@@ -2,7 +2,7 @@
 set -u
 set -e
 
-for i in {1..3}
+for i in {1..1}
 do
     DDIR="qdata/c$i"
     mkdir -p $DDIR
@@ -19,7 +19,7 @@ DOWN=true
 while $DOWN; do
     sleep 0.1
     DOWN=false
-    for i in {1..3}
+    for i in {1..1}
     do
 	if [ ! -S "qdata/c$i/tm.ipc" ]; then
             DOWN=true
